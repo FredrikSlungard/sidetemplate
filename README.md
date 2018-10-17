@@ -16,3 +16,6 @@ Viser overskriftene i teksten på nivået du er nå.
 Default er at navigasjonen viser overskriftene mellom to h1 typer.
 
 Denne oppdateres etterhvert som du scroller.
+
+# Biblioteker
+Siden bruker Bootstrap (Jasny versjon) og jquery

@@ -1,0 +1,23 @@
+/* Sikrer at innholdet i main (body) alltid er 300px (altså ikke under navigasjonen) */
+@media (min-width: 992px) {
+  body {
+    padding-left: 300px;
+  }
+}
+
+/* Søkeboksen øverst i navigasjonen */
+input[type=text] {
+    width: 150px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    padding: 12px 0px 12px 12px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 100%;
+}
