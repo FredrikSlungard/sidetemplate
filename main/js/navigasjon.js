@@ -1,12 +1,12 @@
+'use strict'
 /* Legger til overskrifter i navigasjonen til venstre, med referanse til overskriften hvis den har en ID. Hvis ikke søkes det etter overskriften når brukeren klikker på overskriften
 
 h1 Legges til som navmenu-brand 
 h2 legges til som liste under h1 */
-'use strict'
 Legg_Til_Overskrift = () => {
 
   let destinasjon = $('#nav_innhold');
-  let Overskrifter = $('h2');
+  let Overskrifter = $('h1,h2');
   let innhold = '';
 
   destinasjon.empty();
@@ -23,7 +23,7 @@ Legg_Til_Overskrift = () => {
 Legg_Til_Overskrift();
 
 
-// Går til overskriften når noen tykker på overskriften i navigasjonen
+/* // Går til overskriften når noen tykker på overskriften i navigasjonen
 $('.nav_Clickable').on('click', function () {
   let Overskrifter = $('h2');
   let Søk_Etter = this.text;
@@ -41,8 +41,8 @@ $('.nav_Clickable').on('click', function () {
   }
   else {
     /* let Result2 = Result[0];
-    console.log(Result2.position().top);   */
+    console.log(Result2.position().top);
   };
 
-});
+}); */
 
