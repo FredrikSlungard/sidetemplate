@@ -7,7 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!--CSS-->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
 
 
   <!-- Latest compiled and minified CSS -->
@@ -29,32 +30,41 @@
 
 <body>
 
+  <!--Navigasjonen på toppen JASNY gjør at det ikke er mulig å feste denne-->
+  <nav>
+    <div class="navbar">
+    <p class="navbar-header navbar-brand">Prosjektnavn</p>
+    <form id="søk_nav" class="navbar-form" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Søk">
+        </div>
+      </form>
+    </div>
+  </nav>
+
   <!--Navigasjonen til venstre-->
-  <nav role="navigation">
-    <div class="navmenu navmenu-default navmenu-fixed-left offcanvas-sm navmenu-inverse">
-      <a class="navmenu-brand visible-md visible-lg" href="#">Prosjektnavn</a>
+  <nav role="navigation" class="visible-md visible-lg">
+    <div class="navmenu navmenu-fixed-left offcanvas-sm">
+      <form id="søk_nav" class="navmenu-form" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Søk i overskrifter">
+        </div>
+      </form>
+      <div id="nav_innhold">
+      <a class="navmenu-brand" href="#">Del 1</a>
       <ul class="navmenu-nav">
         <li><a href="#">Item 1</a></li>
         <li><a href="#">Item 2</a></li>
         <li><a href="#">Item 3</a></li>
       </ul>
+
+      <a class="navmenu-brand" href="#">Del 2</a>
+    </div>
     </div>
   </nav>
 
-  <!--Navigasjonen på toppen-->
-  <div class="navbar navbar-default navbar-fixed-top">
-    <form class="navbar-form navbar-left" role="search">
-      <div class="form-group">
-        <input type="text" class="form-control" placeholder="Søk">
-      </div>
-    </form>
-  </div>
-
-  
-
-
   <!--Hovedinnholdet-->
-  <main id="innhold">
+  <main id="innhold" role="main">
     <div class="container-fluid">
       <h1>Web Browsers</h1>
       <p>Google Chrome, Firefox, and Internet Explorer are the most used browsers today.</p>

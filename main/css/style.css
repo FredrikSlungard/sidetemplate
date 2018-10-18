@@ -1,3 +1,9 @@
+/* Veiledning CSS: 
+.Navnmenu = Påvirker alle items i navmenu
+.Navnmenu a = a tag i Navnmenu 
+.navmenu a:hover = påvirker det som skjer når hover over a tag
+*/
+
 /* Sikrer at innholdet i main (body) alltid er 300px (altså ikke under navigasjonen) */
 @media (min-width: 992px) {
   body {
@@ -5,7 +11,7 @@
   }
 }
 
-/* Søkeboksen øverst i navigasjonen */
+/* Søkebokser med input type text*/
 input[type=text] {
   width: 150px;
   box-sizing: border-box;
@@ -20,4 +26,38 @@ input[type=text] {
 
 input[type=text]:focus {
   width: 100%;
+}
+
+/* Navbar på toppen øverst */
+.navbar {
+  background-color: #222930;
+  color: white;
+
+  padding-bottom: 10px;
+  border-bottom: 10px solid #FFFFFF; /* whichever color you prefer */
+}
+
+/* Styling på navigasjonen  til venstre
+Setter padding til venstre og på top
+Hinder understreking i lenker <a>
+Fjerner kulepunkter i lister <ul>*/
+.navmenu {
+  background-color: #111;
+  color: #D3D3D3;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.navmenu a {
+  text-decoration: none;
+  color: #D3D3D3;
+}
+
+.navmenu a:hover {
+  color: #f1f1f1;
+  font-size: 120%;
+}
+
+.navmenu ul {
+  list-style-type: none;
 }
