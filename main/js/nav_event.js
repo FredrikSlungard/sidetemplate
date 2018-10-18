@@ -35,4 +35,4 @@ $('.nav_clickable').on('click', function () {
     scrollTop: (Destinasjon)
   }, 1000);
 
-}); 
+});

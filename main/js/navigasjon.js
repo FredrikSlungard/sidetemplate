@@ -2,7 +2,7 @@
 
 h1 Legges til som navmenu-brand 
 h2 legges til som liste under h1 */
-Legg_Til_Overskrift = () => {
+Overskrift_Side_Nav = () => {
   'use strict'
   
   let destinasjon = $('#nav_innhold');
@@ -43,4 +43,4 @@ Legg_Til_Overskrift = () => {
   $(innhold).insertAfter($(destinasjon));
 };
 
-Legg_Til_Overskrift();
+Overskrift_Side_Nav();
