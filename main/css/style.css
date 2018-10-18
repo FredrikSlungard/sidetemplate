@@ -32,9 +32,11 @@ input[type=text]:focus {
 .navbar {
   background-color: #222930;
   color: white;
-
+  
+  padding-top: 20px;
+  padding-left: 20px;
   padding-bottom: 10px;
-  border-bottom: 10px solid #FFFFFF; /* whichever color you prefer */
+  border-bottom: 2px solid #111;
 }
 
 /* Styling på navigasjonen  til venstre
