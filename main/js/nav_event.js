@@ -1,11 +1,13 @@
 
 // Går til overskriften i dokumentet når noen tykker på overskriften i navigasjonen
 // Hvis det er flere treff går den til den første overskriften
+const  Overskrifter = $('h1,h2');
+
 $('.nav_clickable').on('click', function () {
-  let Overskrifter = $('h1,h2');
+  'use strict'
+
   let Søk_Etter = $(this).text();
   let Destinasjon = 0;
-
   const windowHeight = $(window).height();
 
   // Søker etter overskriften og filterer ut verdiene som ikke treffer søkeverdien
@@ -28,10 +30,9 @@ $('.nav_clickable').on('click', function () {
     Destinasjon -= (windowHeight / 2);
   };
 
-
   // Scroller til destinasjonen
   $('html, body').animate({
     scrollTop: (Destinasjon)
-  }, 700);
+  }, 1000);
 
 }); 
