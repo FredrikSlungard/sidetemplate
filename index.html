@@ -25,17 +25,29 @@
 </head>
 
 <body>
+  <!--Navigasjonen på toppen JASNY gjør at det ikke er mulig å feste denne
+  Virker også som den gjør at søkeboksen kommer lengst til høyre-->
+  <nav class="navbar" role="navigation">
 
-  <!--Navigasjonen på toppen JASNY gjør at det ikke er mulig å feste denne-->
-  <nav>
-    <div class="navbar">
-      <p class="navbar-header navbar-brand">Prosjektnavn</p>
+    <div class="navbar-brand">
+      <p class="navbar-header">Prosjektnavn</p>
     </div>
+
+    <form class="navbar-form navbar-left form-inline" role="search">
+
+      <div class="form-group">
+        <input class="form-control mr-sm-2" type="search" placeholder="Søk i dokumentet" aria-label="Søk">
+
+        <button class="btn btn-outline-success">Søk</button>
+      </div>
+
+    </form>
   </nav>
 
   <!--Navigasjonen til venstre-->
   <nav role="navigation" class="visible-md visible-lg">
     <div class="navmenu navmenu-fixed-left offcanvas-sm">
+
       <form id="søk_nav" class="navmenu-form" role="search">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Søk i overskrifter">
@@ -43,6 +55,7 @@
       </form>
       <div id="nav_innhold">
       </div>
+
     </div>
   </nav>
 
