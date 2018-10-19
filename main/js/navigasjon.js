@@ -2,7 +2,7 @@
 
 h1 Legges til som navmenu-brand 
 h2 legges til som liste under h1 */
-Overskrift_Side_Nav = () => {
+$(function() {
   'use strict'
   
   let destinasjon = $('#nav_innhold');
@@ -16,23 +16,23 @@ Overskrift_Side_Nav = () => {
     
     // Lager h2 elementer som et liste element med href
     if ($(value).is('h2')) {
-      innhold += '<li><a class="nav_clickable" href="#">' + $(value).text() + '</li></a>';
+      innhold += '<li><a class="navItem nav_clickable" href="#">' + $(value).text() + '</li></a>';
 
     }
     // Start en ny liste og legg til h1 som brand
     else if ($(value).is('h1')) {
 
       if (index === 0) {
-        innhold += '<a class="navmenu-brand nav_clickable" href="#">' + $(value).text() + '</a>';
+        innhold += '<a class="navItem navmenu-brand nav_clickable" href="#">' + $(value).text() + '</a>';
       }
       // Avslutter den gamle overskriften
       else {
         innhold += '</ul>';
-        innhold += '<a class="navmenu-brand nav_clickable" href="#">' + $(value).text() + '</a>';
+        innhold += '<a class="navItem navmenu-brand nav_clickable" href="#">' + $(value).text() + '</a>';
       };
 
       // Starter en ny liste under hovedoverskriften
-      innhold += '<ul class="navmenu-nav">';
+      innhold += '<ul class="navItem navmenu-nav">';
 
     };
   });
@@ -41,6 +41,4 @@ Overskrift_Side_Nav = () => {
   innhold += '</ul>';
 
   $(innhold).insertAfter($(destinasjon));
-};
-
-Overskrift_Side_Nav();
+});

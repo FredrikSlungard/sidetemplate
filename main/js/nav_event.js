@@ -1,38 +1,74 @@
 
 // Går til overskriften i dokumentet når noen tykker på overskriften i navigasjonen
 // Hvis det er flere treff går den til den første overskriften
-const  Overskrifter = $('h1,h2');
-
-$('.nav_clickable').on('click', function () {
+$(function () {
   'use strict'
 
-  let Søk_Etter = $(this).text();
-  let Destinasjon = 0;
-  const windowHeight = $(window).height();
+  let Overskrifter = $('h1,h2');
 
-  // Søker etter overskriften og filterer ut verdiene som ikke treffer søkeverdien
-  let Result = Overskrifter.filter(function () {
-    return $(this).text() === Søk_Etter;
+  $('.nav_clickable').on('click', function () {
+
+    let Søk_Etter = $(this).text();
+    let Destinasjon = 0;
+    const windowHeight = $(window).height();
+
+    // Søker etter overskriften og filterer ut verdiene som ikke treffer søkeverdien
+    let Result = Overskrifter.filter(function () {
+      return $(this).text() === Søk_Etter;
+    });
+
+    // Velger destinasjon utifra antall treff, ved flere treff velges den øverste
+    if (Result.length === 1) {
+      Destinasjon = $(Result).offset().top;
+    }
+    else {
+      let Første_Overskrift = Result[0];
+      Destinasjon = $(Første_Overskrift).offset().top;
+    };
+
+    // Gjør at den scroller til midten av siden hvis overskriften er lavere enn
+    // høyden på vinduet
+    if (Destinasjon < windowHeight) {
+      Destinasjon -= (windowHeight / 2);
+    };
+
+    // Scroller til destinasjonen
+    $('html, body').animate({
+      scrollTop: (Destinasjon)
+    }, 1000);
+
   });
 
-  // Velger destinasjon utifra antall treff, ved flere treff velges den øverste
-  if (Result.length === 1) {
-    Destinasjon = $(Result).offset().top;
-  }
-  else {
-    let Første_Overskrift = Result[0];
-    Destinasjon = $(Første_Overskrift).offset().top;
-  };
+  // Viser søkeresultatene som matcher
+  $('#søk_nav').on('keyup', function () {
 
-  // Gjør at den scroller til midten av siden hvis overskriften er lavere enn
-  // høyden på vinduet
-  if (Destinasjon < windowHeight) {
-    Destinasjon -= (windowHeight / 2);
-  };
+    let Search_Prase = $("input:text").val();
 
-  // Scroller til destinasjonen
-  $('html, body').animate({
-    scrollTop: (Destinasjon)
-  }, 1000);
+    if (Search_Prase.length === 0) {
+      $('li').show();
+      $('.nav_clickable').show();
+    }
 
+    // Let gjennom listen og klassen clickable (h1 overskriftene)
+    else {
+
+      /* Gjør funksjonen "contains" case-insensitive
+      https://css-tricks.com/snippets/jquery/make-jquery-contains-case-insensitive/
+      https://github.com/jquery/sizzle/wiki#sizzleselectorscreatepseudofunction */
+      $.expr[":"].contains = $.expr.createPseudo(function (arg) {
+        return function (elem) {
+          return $(elem).text().toUpperCase().indexOf(arg.toUpperCase()) >= 0;
+        };
+      });
+
+      $('li:not(:contains("' + Search_Prase + '")), .nav_clickable:not(:contains("' + Search_Prase + '"))')
+        .hide();
+
+      // Viser resultatene som matcher (oppdaterer søket etterhver)
+      $('li:contains("' + Search_Prase + '"), .nav_clickable:contains("' + Search_Prase + '")')
+        .show();
+
+    };
+
+  });
 });

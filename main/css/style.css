@@ -63,3 +63,26 @@ Fjerner kulepunkter i lister <ul>*/
 .navmenu ul {
   list-style-type: none;
 }
+
+/* Klassen for å vise/skjule innhold
+Brukes på nedtrekksliste og i navigasjonen til høyre */
+/* Collapsible - Denne brukes når innholdet er skjult */
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+}
+
+/* Visible - Denne brukes når innholdet er synlig */
+.nav_visible {
+  display: block;
+}
+
+.nav_hidden {
+  display: none;
+}
