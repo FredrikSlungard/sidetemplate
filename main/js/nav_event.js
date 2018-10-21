@@ -44,6 +44,7 @@ $(function () {
 
     let Search_Prase = $("input:text").val();
 
+    // Vis alt hvis søkelengden er null
     if (Search_Prase.length === 0) {
       $('li').show();
       $('.nav_clickable').show();
