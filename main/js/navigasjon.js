@@ -11,7 +11,7 @@ $(function() {
 
   destinasjon.empty(); // Fjerner gammelt innhold i div, f.eks. testeverdier etc.
 
-  // Gå gjennom alle overskriftene og legg til i overskriftene
+  // Gå gjennom alle overskriftene i dokumentent og legger de til i navigasjonen til vendtre
   $.each(Overskrifter, function (index, value) {
     
     // Lager h2 elementer som et liste element med href

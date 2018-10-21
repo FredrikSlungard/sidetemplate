@@ -27,43 +27,31 @@
 <body>
   <!--Navigasjonen på toppen JASNY gjør at det ikke er mulig å feste denne
   Virker også som den gjør at søkeboksen kommer lengst til høyre-->
-  <nav class="navbar" role="navigation">
-
-    <div class="navbar-brand">
-      <p class="navbar-header">Prosjektnavn</p>
-    </div>
-
-    <form class="navbar-form navbar-left form-inline" role="search">
-
-      <div class="form-group">
-        <input class="form-control mr-sm-2" type="search" placeholder="Søk i dokumentet" aria-label="Søk">
-
-        <button class="btn btn-outline-success">Søk</button>
-      </div>
-
-    </form>
-  </nav>
+  <div id="top_navbar">
+    <script>
+      $("#top_navbar").load("/main/html/top_navbar.html");
+    </script>
+  </div>
 
   <!--Navigasjonen til venstre-->
-  <nav role="navigation" class="visible-md visible-lg">
-    <div class="navmenu navmenu-fixed-left offcanvas-sm">
+  <div id="left_navbar">
+    <script>
+      $("#left_navbar").load("/main/html/left_nav.html");
+    </script>
+  </div>
 
-      <form id="søk_nav" class="navmenu-form" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Søk i overskrifter">
-        </div>
-      </form>
-      <div id="nav_innhold">
-      </div>
-
-    </div>
-  </nav>
+  <!--Søkefunksjonen til høyre-->
+  <div id="right_navbar">
+    <script>
+      $("#right_navbar").load("/main/html/right_nav.html");
+    </script>
+  </div>
 
   <!--Hovedinnholdet-->
   <main id="innhold" role="main">
     <div class="container-fluid">
       <h1>Web Browsers</h1>
-      <p>Google Chrome, Firefox, and Internet Explorer are the most used browsers today.</p>
+      <p>Google Chrome, Firefox, and Internet Explorer are the most used browsers today. Nå skal jeg se hvor langt teksten går, særlig med tanke på right padding for navigasjonen til høyre</p>
 
       <article>
         <h2>Google Chrome</h2>
@@ -130,7 +118,6 @@
         <h2>Jeg er en underoverskrift til den nederste delen</h2>
         <p>Her er noe tekst under overskriften, bare fyll på siden egentlig</p>
       </article>
-    </div>
 
     <h1>Web Browsers</h1>
     <p>Google Chrome, Firefox, and Internet Explorer are the most used browsers today.</p>
@@ -169,6 +156,7 @@
       <h2>Mozilla Firefox</h2>
       <p>Firefox is a free, open-source web browser from Mozilla, released in 2004.</p>
     </article>
+  </div>
   </main>
 
   <!--Laster inn sidenavigasjon-->

@@ -55,17 +55,17 @@ $(function () {
       /* Gjør funksjonen "contains" case-insensitive
       https://css-tricks.com/snippets/jquery/make-jquery-contains-case-insensitive/
       https://github.com/jquery/sizzle/wiki#sizzleselectorscreatepseudofunction */
-      $.expr[":"].contains = $.expr.createPseudo(function (arg) {
+      $.expr[":"].def_contains = $.expr.createPseudo(function (arg) {
         return function (elem) {
           return $(elem).text().toUpperCase().indexOf(arg.toUpperCase()) >= 0;
         };
       });
 
-      $('li:not(:contains("' + Search_Prase + '")), .nav_clickable:not(:contains("' + Search_Prase + '"))')
+      $('li:not(:def_contains("' + Search_Prase + '")), .nav_clickable:not(:def_contains("' + Search_Prase + '"))')
         .hide();
 
       // Viser resultatene som matcher (oppdaterer søket etterhver)
-      $('li:contains("' + Search_Prase + '"), .nav_clickable:contains("' + Search_Prase + '")')
+      $('li:def_contains("' + Search_Prase + '"), .nav_clickable:def_contains("' + Search_Prase + '")')
         .show();
 
     };

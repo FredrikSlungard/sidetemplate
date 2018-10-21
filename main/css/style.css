@@ -4,10 +4,11 @@
 .navmenu a:hover = påvirker det som skjer når hover over a tag
 */
 
-/* Sikrer at innholdet i main (body) alltid er 300px (altså ikke under navigasjonen) */
+/* Sikrer at innholdet i main (body) alltid er 300px (altså ikke under navigasjonen) Navigasjonen skjules hvis skjermstørrelsen er mindre enn 992 px*/
 @media (min-width: 992px) {
   body {
     padding-left: 300px;
+    padding-right: 300px;
   }
 }
 
