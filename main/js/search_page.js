@@ -8,28 +8,39 @@ $(function () {
   const Doc_Content = $('p, :header');
   const Dest_Treff = $('#søke_treff');
 
+  // Returnerer treffene i dokumentet
+  Treff_I_Dokument = (Søk_Etter) => {
+    // Filtrer treffene
+    let New_Phrase = '';
+
+    let Treff = Doc_Content.filter(function (index, value) {
+      if ($(value).is(':def_contains(' + Søk_Etter + ')')) {
+        return $(value);
+      };
+    });
+
+    // Gjør om til en <ul> liste for orden og <a> tag med referanse til posisjon.
+    return $.map(Treff, function(value, i) {
+      let Top_Pos = $(value).offset().top;
+
+      New_Phrase = '<ul><a name=' + Top_Pos + '>' + $(value).text() + '</a></ul>';
+      return New_Phrase
+
+    });
+  };
+
   // Viser søkeresultatene som matcher
   $('#search_doc').on('keyup', function () {
     let Search_Prase = $(this).val();
     let New_Phrase = '';
 
     if (Search_Prase.length >= 3) {
-      let Result = Doc_Content.filter(function (index, value) {
-        if ($(value).is(':def_contains(' + Search_Prase + ')')) {
+      let Funnet_Ord = Treff_I_Dokument(Search_Prase);
 
-          $(value).attr('name', $(value).offset().top);
-          New_Phrase = '<a name=' + $(value).attr('name') + '>' + $(value).text() + '</a>';
-
-          return New_Phrase;
-
-        };
-      });
-
-      // Limer inn søkeresultatet
-      Dest_Treff.empty();
-      Result.clone().appendTo(Dest_Treff);
-      Dest_Treff.highlight(Search_Prase);
-
+      // Limer inn søkeresultatet hvis det er treff
+      Dest_Treff.empty()
+      .append(Funnet_Ord)
+      .highlight(Search_Prase);
     }
 
     // Fjern innholdet hvis det er mindre enn 3 bokstaver
