@@ -66,34 +66,9 @@ Fjerner kulepunkter i lister <ul>*/
   list-style-type: none;
 }
 
-/* Overskriftene i søketreffet vises som vanlig tekst met fet skrift */
-#søke_treff h1 {
-  font-size: 14px;
-  font-weight: bold;
-}
-
-#søke_treff h2 {
-  font-size: 14px;
-  font-weight: bold;
-}
-
-#søke_treff h3 {
-  font-size: 14px;
-  font-weight: bold;
-}
-
-#søke_treff h4 {
-  font-size: 14px;
-  font-weight: bold;
-}
-
-#søke_treff h5 {
-  font-size: 14px;
-  font-weight: bold;
-}
-
-#søke_treff h6 {
-  font-size: 14px;
+/* Overskriftene i søketreffet vises som vanlig tekst med fet skrift */
+#søke_treff h1, #søke_treff h2, #søke_treff h3, #søke_treff h4, #søke_treff h5, #søke_treff h6 {
+  font-size: 15px;
   font-weight: bold;
 }
 
@@ -122,4 +97,9 @@ Brukes på nedtrekksliste og i navigasjonen til høyre */
 
 .nav_hidden {
   display: none;
+}
+
+/* Styling på ordene som markeres */
+.highlight { 
+  background-color: #107896 
 }
