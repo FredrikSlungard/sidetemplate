@@ -42,7 +42,7 @@ $(function () {
   // Viser søkeresultatene som matcher
   $('#søk_nav').on('keyup', function () {
 
-    let Search_Prase = $("input:text").val();
+    let Search_Prase = $(this).val();
 
     // Vis alt hvis søkelengden er null
     if (Search_Prase.length === 0) {
@@ -52,15 +52,6 @@ $(function () {
 
     // Let gjennom listen og klassen clickable (h1 overskriftene)
     else {
-
-      /* Gjør funksjonen "contains" case-insensitive
-      https://css-tricks.com/snippets/jquery/make-jquery-contains-case-insensitive/
-      https://github.com/jquery/sizzle/wiki#sizzleselectorscreatepseudofunction */
-      $.expr[":"].def_contains = $.expr.createPseudo(function (arg) {
-        return function (elem) {
-          return $(elem).text().toUpperCase().indexOf(arg.toUpperCase()) >= 0;
-        };
-      });
 
       $('li:not(:def_contains("' + Search_Prase + '")), .nav_clickable:not(:def_contains("' + Search_Prase + '"))')
         .hide();

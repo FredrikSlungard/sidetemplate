@@ -6,7 +6,7 @@ $(function() {
   'use strict'
   
   let destinasjon = $('#nav_innhold');
-  let Overskrifter = $('h1,h2');
+  let Overskrifter = $('h1, h2');
   let innhold = '';
 
   destinasjon.empty(); // Fjerner gammelt innhold i div, f.eks. testeverdier etc.

@@ -2,10 +2,11 @@
 $(function () {
   'user strict'
 
-  const Doc_Content = $('body');
+  const Doc_Content = $('p')
+  const Headings = $(':header[id=innhold]');
   const Dest_Treff = $('#søke_treff');
 
-  /* Gjør funksjonen "contains" case-insensitive
+    /* Gjør funksjonen "contains" case-insensitive
   https://css-tricks.com/snippets/jquery/make-jquery-contains-case-insensitive/
   https://github.com/jquery/sizzle/wiki#sizzleselectorscreatepseudofunction */
   $.expr[":"].def_contains = $.expr.createPseudo(function (arg) {
@@ -14,23 +15,27 @@ $(function () {
     };
   });
 
+  let Result = Doc_Content.filter(function () {
+    if ($(this).is(':def_contains(' + 'Chrome' + ')')) {
+      return $(this).text()
+    };
+  });
+
+  $.each()
+
+  Dest_Treff.append(Result);
+
   // Viser søkeresultatene som matcher
   $('#search_doc').on('keyup', function () {
     let Search_Prase = $(this).val();
-    
-    console.log(Search_Prase);
+
     if (Search_Prase.length >= 3) {
+      // Ikke søk før det er over 3 bokstaver
+    }
 
-      if ($(this).is(':contains(chrome)')) {
-        console.log("OK")
-      };
-
-      //let Funnet = $('body:def_contains(chrome)');
-
+    // Fjern innholdet hvis det er mindre enn 3 bokstaver
+    else {
+      Dest_Treff.empty();
     };
   });
 });
-
-/*    // Viser resultatene som matcher (oppdaterer søket etterhver)
-   $('li:def_contains("' + Search_Prase + '"), .nav_clickable:def_contains("' + Search_Prase + '")')
-   .show(); */
