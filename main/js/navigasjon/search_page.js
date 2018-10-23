@@ -4,7 +4,7 @@ Navn lagrer posisjonen til itemet, når brukeren trykker på scrolles siden ned 
 $(function () {
   'user strict'
 
-  // Konstanter som ikke endres underveis
+  // Konstanter som ikke endres underveis (vil ikke søke i nedtrekkslister)
   const Doc_Content = $('p, :header');
   const Dest_Treff = $('#søke_treff');
 
@@ -32,7 +32,6 @@ $(function () {
   // Viser søkeresultatene som matcher
   $('#search_doc').on('keyup', function () {
     let Search_Prase = $(this).val();
-    let New_Phrase = '';
 
     if (Search_Prase.length >= 3) {
       let Funnet_Ord = Treff_I_Dokument(Search_Prase);

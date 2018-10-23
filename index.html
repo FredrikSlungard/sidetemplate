@@ -28,152 +28,23 @@
   <!--Navigasjonen på toppen JASNY gjør at det ikke er mulig å feste denne
   Virker også som den gjør at søkeboksen kommer lengst til høyre-->
   <div id="top_navbar">
-    <script>
-      $("#top_navbar").load("/main/html/top_navbar.html");
-    </script>
   </div>
 
   <!--Navigasjonen til venstre-->
   <div id="left_navbar">
-    <script>
-      $("#left_navbar").load("/main/html/left_nav.html");
-    </script>
   </div>
 
   <!--Søkefunksjonen til høyre-->
   <div id="right_navbar">
-    <script>
-      $("#right_navbar").load("/main/html/right_nav.html");
-    </script>
   </div>
 
   <!--Hovedinnholdet-->
   <main id="innhold" role="main">
-    <div class="container">
-      <h1>Web Browsers</h1>
-      <p>Google Chrome, Firefox, and Internet Explorer are the most used browsers today. Nå skal jeg se hvor langt teksten går, særlig med tanke på right padding for navigasjonen til høyre</p>
-
-      <article>
-        <h2>Google Chrome</h2>
-        <p>Google Chrome is a free, open-source web browser developed by Google,
-          released in 2008.</p>
-      </article>
-
-      <article>
-        <h2>Internet Explorer</h2>
-        <p>Internet Explorer is a free web browser from Microsoft, released in 1995.</p>
-      </article>
-
-      <article>
-        <h2>Mozilla Firefox</h2>
-        <p>Firefox is a free, open-source web browser from Mozilla, released in 2004.</p>
-      </article>
-
-      <article>
-        <h1>Dette er den nye siden</h1>
-        <h2>Jeg er en underoverskrift</h2>
-        <p>Her er noe tekst under overskriften, bare fyll på siden egentlig</p>
-      </article>
-
-      <h1>Web Browsers</h1>
-      <p>Google Chrome, Firefox, and Internet Explorer are the most used browsers today.</p>
-
-      <article>
-        <h2>Google Chrome</h2>
-        <p>Google Chrome is a free, open-source web browser developed by Google,
-          released in 2008.</p>
-      </article>
-
-      <article>
-        <h2>Internet Explorer</h2>
-        <p>Internet Explorer is a free web browser from Microsoft, released in 1995.</p>
-      </article>
-
-      <article>
-        <h2>Mozilla Firefox</h2>
-        <p>Firefox is a free, open-source web browser from Mozilla, released in 2004.</p>
-      </article>
-
-      <h1>Web Browsers</h1>
-      <p>Google Chrome, Firefox, and Internet Explorer are the most used browsers today.</p>
-
-      <article>
-        <h2>Google Chrome</h2>
-        <p>Google Chrome is a free, open-source web browser developed by Google,
-          released in 2008.</p>
-      </article>
-
-      <article>
-        <h2>Internet Explorer</h2>
-        <p>Internet Explorer is a free web browser from Microsoft, released in 1995.</p>
-      </article>
-
-      <article>
-        <h2>Mozilla Firefox</h2>
-        <p>Firefox is a free, open-source web browser from Mozilla, released in 2004.</p>
-      </article>
-
-      <article>
-        <h1>Dette er den nederste delen</h1>
-        <h2>Jeg er en underoverskrift til den nederste delen</h2>
-        <p>Her er noe tekst under overskriften, bare fyll på siden egentlig</p>
-      </article>
-
-    <h1>Web Browsers</h1>
-    <p>Google Chrome, Firefox, and Internet Explorer are the most used browsers today.</p>
-
-    <article>
-      <h2>Google Chrome</h2>
-      <p>Google Chrome is a free, open-source web browser developed by Google,
-        released in 2008.</p>
-    </article>
-
-    <article>
-      <h2>Internet Explorer</h2>
-      <p>Internet Explorer is a free web browser from Microsoft, released in 1995.</p>
-    </article>
-
-    <article>
-      <h2>Mozilla Firefox</h2>
-      <p>Firefox is a free, open-source web browser from Mozilla, released in 2004.</p>
-    </article>
-
-    <h1>Web Browsers</h1>
-    <p>Google Chrome, Firefox, and Internet Explorer are the most used browsers today.</p>
-
-    <article>
-      <h2>Google Chrome</h2>
-      <p>Google Chrome is a free, open-source web browser developed by Google,
-        released in 2008.</p>
-    </article>
-
-    <article>
-      <h2>Internet Explorer</h2>
-      <p>Internet Explorer is a free web browser from Microsoft, released in 1995.</p>
-    </article>
-
-    <article>
-      <h2>Mozilla Firefox</h2>
-      <p>Firefox is a free, open-source web browser from Mozilla, released in 2004.</p>
-    </article>
-
-    <ul>
-      <li>Element 1</li>
-      <li>Element 2</li>
-      <li>Element 3</li>
-      <li>Element 4</li>
-      <li>Dette er egentlig bare for å teste hvordan det blir</li>
-    </ul>
-  </div>
   </main>
 
   <!--Laster inn sidenavigasjon-->
   <script>
-    $.get('main/js/pseudo_exp.js');
-    $.get('/main/js/navigasjon.js');
-    $.get('/main/js/nav_event.js');
-    $.get('main/js/highlight.js')
-    $.get('main/js/search_page.js');
+    $.get('main/js/index_load.js');
   </script>
 
 </body>
