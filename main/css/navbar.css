@@ -79,20 +79,6 @@ Fjerner kulepunkter i lister <ul>*/
   font-weight: bold;
 }
 
-/* Klassen for å vise/skjule innhold
-Brukes på nedtrekksliste og i navigasjonen til høyre */
-/* Collapsible - Denne brukes når innholdet er skjult */
-.collapsible {
-  background-color: #777;
-  color: white;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-}
-
 /* Styling på ordene som markeres */
 .highlight { 
   background-color: #107896 
