@@ -79,10 +79,6 @@ Fjerner kulepunkter i lister <ul>*/
   font-weight: bold;
 }
 
-/* div {width: 500px; padding-bottom: 10px; }
-#Content1, #Content2 {border-bottom: 3px solid #4588ba; margin-bottom:10px;}
-div p {background: #4588ba; line-height: 150px; font-size: 2em; font-family: sans-serif; color: white; margin: 0; padding-left: 30px;} */
-
 /* Klassen for å vise/skjule innhold
 Brukes på nedtrekksliste og i navigasjonen til høyre */
 /* Collapsible - Denne brukes når innholdet er skjult */
@@ -95,15 +91,6 @@ Brukes på nedtrekksliste og i navigasjonen til høyre */
   border: none;
   text-align: left;
   outline: none;
-}
-
-/* Visible - Denne brukes når innholdet er synlig */
-.nav_visible {
-  display: block;
-}
-
-.nav_hidden {
-  display: none;
 }
 
 /* Styling på ordene som markeres */
