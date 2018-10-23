@@ -31,6 +31,9 @@ input[type=search]:focus {
 
 /* Navbar på toppen øverst */
 .navbar {
+  position: fixed;
+  width: 100%;
+  
   background-color: #222930;
   color: white;
   
