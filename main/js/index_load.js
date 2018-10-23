@@ -1,6 +1,6 @@
 // Script som kjører når siden lastes inn
 $(function () {
-
+  
   // Laster inn HTML innholdet på siden
   Last_Innhold = () => {
     // Laster inn innholdet som skal være i navigasjonbarene.
@@ -27,7 +27,7 @@ $(function () {
     $.get('/main/js/navigasjon/search_page.js');
   };
 
-  let innhold = Last_Innhold();
-  let funksjonalitet = Javascript_Funksjonalitet();
+  Last_Innhold();
+  Javascript_Funksjonalitet();
 
 });
